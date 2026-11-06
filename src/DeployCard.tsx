@@ -130,9 +130,12 @@ export function DeployCard({deployment, apiBaseUrl, sharedToken}: Props) {
           <Flex align="center" gap={2} wrap="wrap">
             <Code size={1}>{subject}</Code>
             {target && (
-              <Text size={1} muted>
-                on <Code size={1}>{target.branch}</Code>
-              </Text>
+              <>
+                <Text size={1} muted>
+                  on
+                </Text>
+                <Code size={1}>{target.branch}</Code>
+              </>
             )}
           </Flex>
           {(target?.triggerName || target?.repo) && (
