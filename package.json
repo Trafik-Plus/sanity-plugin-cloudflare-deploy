@@ -1,6 +1,6 @@
 {
   "name": "@trafik-plus/sanity-plugin-cloudflare-deploy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Trigger and monitor Cloudflare Workers Builds and Pages deployments from Sanity Studio",
   "keywords": [
     "sanity",
