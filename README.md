@@ -144,6 +144,15 @@ npm run build
 
 Test in a Studio with `npm install ../sanity-plugin-cloudflare-deploy`.
 
+### Release
+
+Every push to `main` runs the tests, typecheck and build. When the `version` in `package.json` is not on npm yet, the workflow publishes it, through npm trusted publishing (no token stored in the repo). To release, bump the version and push:
+
+```sh
+npm version patch   # or minor / major
+git push --follow-tags
+```
+
 ## License
 
 MIT
