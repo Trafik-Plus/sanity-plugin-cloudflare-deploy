@@ -7,7 +7,6 @@ import {duration, formatDate, timeAgo} from './format'
 import {StatusBadge} from './StatusBadge'
 import type {Build} from './types'
 
-const ellipsis = {whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'} as const
 
 export function DeployHistory({builds}: {builds: Build[]}) {
   if (!builds.length) {
@@ -29,7 +28,7 @@ export function DeployHistory({builds}: {builds: Build[]}) {
               <StatusBadge state={build.state} />
             </Box>
             <Stack gap={2} flex={1} style={{minWidth: 0}}>
-              <Text size={1} weight="medium" style={ellipsis}>
+              <Text size={1} weight="medium" textOverflow="ellipsis" title={build.commitMessage}>
                 {build.commitMessage || build.source || 'Manual build'}
               </Text>
               <Flex gap={2} align="center" wrap="wrap">
