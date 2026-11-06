@@ -8,6 +8,12 @@ Trigger and watch Cloudflare deploys from Sanity Studio. Supports **Workers Buil
 - Add, edit and delete deployments from the Studio, or define them in the Studio config (shown locked)
 - Works with Sanity Studio v4, v5 and v6 (`@sanity/ui` v4)
 
+![Deployments overview: a Workers deployment with its branch, build trigger, status and Deploy button](https://raw.githubusercontent.com/Trafik-Plus/sanity-plugin-cloudflare-deploy/main/docs/overview.jpg)
+
+![Build history: status, commit message, branch, hash, author, age and duration for each build](https://raw.githubusercontent.com/Trafik-Plus/sanity-plugin-cloudflare-deploy/main/docs/history.jpg)
+
+![New deployment form: display name, Workers Builds or Pages, account ID, Worker name, branch and API token](https://raw.githubusercontent.com/Trafik-Plus/sanity-plugin-cloudflare-deploy/main/docs/add-deployment.jpg)
+
 Inspired by [sanity-plugin-vercel-deploy](https://github.com/ndimatteo/sanity-plugin-vercel-deploy) and [sanity-plugin-cloudflare-pages-deploy](https://github.com/estallio/sanity-plugin-cloudflare-pages-deploy).
 
 ## Install
