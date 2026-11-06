@@ -41,7 +41,7 @@ export interface ProxyOptions {
  * or `null` so the caller can serve the Studio's static assets instead.
  *
  * ```ts
- * import {handleCloudflareApiProxy} from 'sanity-plugin-cloudflare-deploy/proxy'
+ * import {handleCloudflareApiProxy} from '@trafik-plus/sanity-plugin-cloudflare-deploy/proxy'
  *
  * export default {
  *   async fetch(request, env) {
@@ -91,7 +91,7 @@ export async function handleCloudflareApiProxy(
  *
  * ```ts
  * // sanity.cli.ts
- * import {cloudflareApiViteProxy} from 'sanity-plugin-cloudflare-deploy/proxy'
+ * import {cloudflareApiViteProxy} from '@trafik-plus/sanity-plugin-cloudflare-deploy/proxy'
  *
  * export default defineCliConfig({
  *   vite: (config) => ({

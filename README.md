@@ -1,4 +1,4 @@
-# sanity-plugin-cloudflare-deploy
+# @trafik-plus/sanity-plugin-cloudflare-deploy
 
 Trigger and watch Cloudflare deploys from Sanity Studio. Supports **Workers Builds** (a Worker connected to Git) and **Cloudflare Pages**, and as many deployments as you like — production, staging, a docs site — each with its own account, project, branch and token.
 
@@ -13,10 +13,10 @@ Inspired by [sanity-plugin-vercel-deploy](https://github.com/ndimatteo/sanity-pl
 ## Install
 
 ```sh
-npm install github:Trafik-Plus/sanity-plugin-cloudflare-deploy
+npm install @trafik-plus/sanity-plugin-cloudflare-deploy
 ```
 
-The package builds itself on install (`prepare`).
+Not to be confused with the unscoped `sanity-plugin-cloudflare-deploy` on npm, a different, Pages-only plugin.
 
 ## Configure
 
@@ -25,7 +25,7 @@ The package builds itself on install (`prepare`).
 ```ts
 // sanity.config.ts
 import {defineConfig} from 'sanity'
-import {cloudflareDeployTool} from 'sanity-plugin-cloudflare-deploy'
+import {cloudflareDeployTool} from '@trafik-plus/sanity-plugin-cloudflare-deploy'
 
 export default defineConfig({
   // …
@@ -75,7 +75,7 @@ The Cloudflare API sends no CORS headers, so the Studio cannot call `api.cloudfl
 
 ```ts
 import {defineCliConfig} from 'sanity/cli'
-import {cloudflareApiViteProxy} from 'sanity-plugin-cloudflare-deploy/proxy'
+import {cloudflareApiViteProxy} from '@trafik-plus/sanity-plugin-cloudflare-deploy/proxy'
 
 export default defineCliConfig({
   // …
@@ -93,7 +93,7 @@ export default defineCliConfig({
 
 ```ts
 // worker.ts
-import {handleCloudflareApiProxy} from 'sanity-plugin-cloudflare-deploy/proxy'
+import {handleCloudflareApiProxy} from '@trafik-plus/sanity-plugin-cloudflare-deploy/proxy'
 
 export default {
   async fetch(request, env) {
