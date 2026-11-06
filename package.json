@@ -1,0 +1,79 @@
+{
+  "name": "sanity-plugin-cloudflare-deploy",
+  "version": "0.1.0",
+  "description": "Trigger and monitor Cloudflare Workers Builds and Pages deployments from Sanity Studio",
+  "keywords": [
+    "sanity",
+    "sanity-plugin",
+    "cloudflare",
+    "cloudflare-workers",
+    "cloudflare-pages",
+    "deploy"
+  ],
+  "homepage": "https://github.com/Trafik-Plus/sanity-plugin-cloudflare-deploy#readme",
+  "bugs": {
+    "url": "https://github.com/Trafik-Plus/sanity-plugin-cloudflare-deploy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trafik-Plus/sanity-plugin-cloudflare-deploy.git"
+  },
+  "license": "MIT",
+  "author": "Trafik Plus",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./proxy": {
+      "source": "./src/proxy.ts",
+      "import": "./dist/proxy.js",
+      "default": "./dist/proxy.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "proxy": [
+        "./dist/proxy.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "pkg-utils build --strict --check --clean",
+    "prepare": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types test/*.test.ts",
+    "watch": "pkg-utils watch --strict"
+  },
+  "dependencies": {
+    "@sanity/icons": "^3.7.4",
+    "@sanity/ui": "^4.2.0"
+  },
+  "devDependencies": {
+    "@sanity/pkg-utils": "^10.0.0",
+    "@types/react": "^19.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sanity": "^6.0.0",
+    "styled-components": "^6.1.0",
+    "typescript": "^5.8.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3 || ^19",
+    "sanity": "^4 || ^5 || ^6"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "browserslist": "extends @sanity/browserslist-config"
+}
